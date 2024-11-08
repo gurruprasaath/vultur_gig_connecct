@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Freelancer Profiles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background for better contrast */
+        }
+        .navbar {
+            background-color: #000000;
+            box-shadow: 0 4px 2px -2px gray;
+        }
+
+        .navbar-nav .nav-link {
+            color: rgb(255, 255, 255);
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #39aaf6;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            height: 275px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s; /* Smooth hover effect */
+        }
+        .card:hover {
+            transform: scale(1.05); /* Slightly enlarge the card on hover */
+        }
+        .card-title {
+            font-size: 1.5rem; /* Increase title font size */
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #007bff; /* Customize button color */
+            border: none; /* Remove border */
+        }
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+        .sort-options a {
+            margin: 0 10px;
+            text-decoration: none; /* Remove underline */
+            color: #007bff; /* Link color */
+        }
+        .sort-options a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        .footer {
+            background-color: #f8f9fa;
+            color: black;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+        }
+        button, .btn-primary {
+            background-color: #39aaf6 !important;
+            color: white; /* Ensures text color is white for all buttons */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 50%;
+        }
+
+        button:hover, .btn-primary:hover {
+            background-color: #39aaf6 !important;
+        }
+
+        /* New styles for Search and SEND buttons */
+        .btn-light {
+            color: white; /* Change text color of SEND button to white */
+        }
+
+        .btn {
+            color: white; /* Change text color of Search button to white */
+        }
+
+        .footer a {
+            color: #39aaf6;
+        }
+
+        .footer a:hover {
+            color: #39aaf6;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 576px) {
+            .form-container {
+                width: 100%;
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Left: Logo and Brand Name -->
+            <img src="logo.jpg" alt="Logo" style="width:50px;height:50px;" class="rounded-circle"> <!-- Adjust the path as needed -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <span style="margin-left: 10px;">GigConnect</span>
+            </a>
+            
+            <!-- Center: Menu Items (Home, Services, Contact) -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Register.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="freelancers.html">Freelancers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right: Search Bar -->
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+<div class="container my-5">
+    <h1 class="mb-4">Freelancer Profiles</h1>
+    <div class="d-flex mb-3 sort-options align-items-center">
+        <span>Sort by:</span>
+        <a href="/?sort_by=totalJobs">Total Jobs</a>
+        <a href="/?sort_by=jobSuccess">Job Success</a>
+        <a href="/?sort_by=hourlyRate">Hourly Rate</a>
+    </div>
+    <div class="row" id="freelancerRow">
+        <!-- Freelancer 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Abeer K.</h5>
+                    <p class="card-text"><strong>Country:</strong> Egypt</p>
+                    <p class="card-text"><strong>Hourly Rate:</strong> $25/hour</p>
+                    <p class="card-text"><strong>Job Success:</strong> 97%</p>
+                    <p class="card-text"><strong>Skills:</strong> Python, Machine Learning, Data Science, SQL, IBM SPSS, Data Visualization</p>
+                    <a href="#" class="btn btn-primary btn-sm">Show More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Freelancer 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Nikola M.</h5>
+                    <p class="card-text"><strong>Country:</strong> Serbia</p>
+                    <p class="card-text"><strong>Hourly Rate:</strong> $15/hour</p>
+                    <p class="card-text"><strong>Job Success:</strong> 97%</p>
+                    <p class="card-text"><strong>Skills:</strong> Data Entry, Research, Lead Generation, Data Analysis, Web Analytics</p>
+                    <a href="#" class="btn btn-primary btn-sm">Show More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Freelancer 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ramil, Jr. A.</h5>
+                    <p class="card-text"><strong>Country:</strong> Philippines</p>
+                    <p class="card-text"><strong>Hourly Rate:</strong> $20/hour</p>
+                    <p class="card-text"><strong>Job Success:</strong> 95%</p>
+                    <p class="card-text"><strong>Skills:</strong> Excel VBA, Data Automation, Data Modeling, Dashboards</p>
+                    <a href="#" class="btn btn-primary btn-sm">Show More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-grid mt-4">
+        <button class="btn btn-secondary" id="loadMore">Load More</button>
+    </div>
+</div>
+
+<script>
+    let loadedCount = 3;  // Start with 3 profiles loaded
+    document.getElementById("loadMore").addEventListener("click", function () {
+        // Simulate loading more data
+        const row = document.getElementById('freelancerRow');
+        const newFreelancers = [
+            {name: 'Jason K.', country: 'USA', hourlyRate: 30, jobSuccess: 90, skills: 'Project Management, Web Development'},
+            {name: 'Muhammad Noman B.', country: 'Canada', hourlyRate: 35, jobSuccess: 92, skills: 'Marketing, SEO, Social Media'},
+        ];
+        
+        newFreelancers.forEach(freelancer => {
+            const col = document.createElement('div');
+            col.className = 'col-md-4';
+            col.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">${freelancer.name}</h5>
+                        <p class="card-text"><strong>Country:</strong> ${freelancer.country}</p>
+                        <p class="card-text"><strong>Hourly Rate:</strong> $${freelancer.hourlyRate}/hour</p>
+                        <p class="card-text"><strong>Job Success:</strong> ${freelancer.jobSuccess}%</p>
+                        <p class="card-text"><strong>Skills:</strong> ${freelancer.skills}</p>
+                        <a href="#" class="btn btn-primary btn-sm">Show More</a>
+                    </div>
+                </div>
+            `;
+            row.appendChild(col);
+        });
+
+        loadedCount += 2;  // Increase the loaded count
+        if (loadedCount >= 6) {
+            document.getElementById("loadMore").style.display = 'none';  // Hide Load More button when no more data
+        }
+    });
+</script>
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+        <div class="row">
+            <!-- Column 1: Social Media Icons -->
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <div>
+                    <a href="#" class="text-white me-2">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white me-2">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white me-2">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Column 2: About Us -->
+            <div class="col-md-4">
+                <h5>About Us</h5>
+                <p>We are dedicated to connecting you with trusted professionals for your daily needs. Our mission is to ensure quality service at affordable prices.</p>
+            </div>
+            <!-- Column 3: Feedback Form -->
+            <div class="col-md-4">
+                <h5>Feedback</h5>
+                <form class="mx-auto" style="max-width: 300px;">
+                    <textarea class="form-control mb-2" rows="3" placeholder="Your Feedback" required></textarea>
+                    <input type="email" class="form-control mb-2" placeholder="Email Address" required>
+                    <button type="submit" class="btn btn-light">SEND</button>
+                </form>
+            </div>
+        </div>
+        <p class="mt-4">&copy; 2024 HomeCraft Solutions | Designed by Your Name</p>
+    </div>
+</footer>
+    
+</body>
+</html>
